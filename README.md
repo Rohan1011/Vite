@@ -1,29 +1,51 @@
-echo "# Vite"
-# Student Feedback App (Scaffold)
+# 🎓 Student Feedback App
 
+A full-stack web application for course feedback.  
+Built with **Node.js + Express + MongoDB** (backend) and **React + Vite** (frontend).
 
-This repository contains a minimal scaffold for a full-stack Student Feedback application.
-It includes a Node/Express backend and a minimal React frontend scaffold.
+---
 
-## What's included
-- backend/: Express + Mongoose API with auth, feedback, course, admin routes.
-- frontend/: Minimal React pages (Signup, Login, Dashboard, Profile, Admin).
-- utils/seed.js to create an admin and sample courses.
+## ✨ Features
 
-## Quick start (backend)
-1. cd backend
-2. cp .env.example .env   and edit values (MONGODB_URI, JWT_SECRET)
-3. npm install
-4. npm run dev
-5. node utils/seed.js  (creates admin@example.com / Admin@1234 and sample courses)
+### 🔑 Authentication & Authorization
+- Signup/Login with email + password
+- Passwords hashed with bcrypt
+- JWT-based authentication
+- Role-based access (Student / Admin)
 
-cd frontend
-npm install
-npm install axios react-router-dom
+### 📝 Feedback
+- Students can:
+  - Submit feedback on courses (rating 1–5 + message)
+  - View, edit, delete their feedback
+- Admins can:
+  - View all feedback
+  - Filter and export to CSV
 
-## Notes
-- This is a scaffold to get you started. Several features are intentionally left as exercises:
-  - profile update persistence, profile picture upload handling on frontend
-  - full frontend build scripts (use Vite/CRA for production)
-- The README in backend/ contains more detailed backend instructions.
-"# Vite" 
+### 👤 Profile
+- Students can view/update profile (name, phone, DOB, address)
+- Email is read-only
+- (Extension: upload profile picture to Cloudinary)
+
+### 📊 Admin Dashboard
+- Overview of:
+  - Total feedback count
+  - Number of students
+  - Average ratings per course
+- Manage students (block/unblock/delete)
+- Manage courses (add/edit/delete)
+
+---
+
+## ⚙️ Tech Stack
+- **Backend**: Node.js, Express, MongoDB, Mongoose, JWT, bcrypt
+- **Frontend**: React (Vite), Axios, React Router
+- **Other**: CSV export, dotenv, CORS
+
+---
+
+## 🚀 Getting Started
+
+### 1️⃣ Clone the repo
+```bash
+git clone https://github.com/Rohan1011/Vite.git
+cd Vite
