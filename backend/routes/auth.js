@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const User = require('../models/User');
+const bcrypt = require("bcryptjs");
 
 function validateEmail(email){ return /\S+@\S+\.\S+/.test(email); }
 function validatePassword(p){ return p.length>=8 && /[0-9]/.test(p) && /[^A-Za-z0-9]/.test(p); }

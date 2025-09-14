@@ -3,6 +3,7 @@ const router = express.Router();
 const Course = require('../models/Course');
 const { auth } = require('../middleware/auth');
 
+
 // public list
 router.get('/', async (req,res) => {
   const list = await Course.find().sort('title');

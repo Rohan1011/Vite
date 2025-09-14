@@ -4,6 +4,7 @@ const Feedback = require('../models/Feedback');
 const Course = require('../models/Course');
 const { auth } = require('../middleware/auth');
 
+
 // submit feedback
 router.post('/', auth, async (req,res) => {
   const {courseId, rating, message} = req.body;
