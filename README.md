@@ -17,6 +17,10 @@ It includes a Node/Express backend and a minimal React frontend scaffold.
 4. npm run dev
 5. node utils/seed.js  (creates admin@example.com / Admin@1234 and sample courses)
 
+cd frontend
+npm install
+npm install axios react-router-dom
+
 ## Notes
 - This is a scaffold to get you started. Several features are intentionally left as exercises:
   - profile update persistence, profile picture upload handling on frontend
